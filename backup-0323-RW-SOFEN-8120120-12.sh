@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash 
 source_move-to-directory"/path/to/source/move-to-directory"
 destination_move-to-directory="/path/to/remote/server/move-to-directory"
 remote_server="user@remote-server"

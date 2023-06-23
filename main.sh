@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+ii#!/usr/bin/env bash
 while true; do
 	echo " Welcome to the Bachelor Software Engineering Cohort List"
 	echo "Please choose an option"
@@ -10,7 +10,7 @@ while true; do
 
 	read -p "Enter your choice: " choice
 
-	if ["$choice" =="1"]; then
+	if ["$choice " =="1"]; then
 		echo "Creating a student record"
 		read -p "Enter student email " email
 		read -p "Enter student age" age
@@ -19,5 +19,16 @@ while true; do
 		echo "Student record Created"
 
 	elif ["$choice" =="2"]; then 
-		cat Student-list_0333.txt
+		cat Students-list_0333.txt
+
+	elif [ "$choice" == "3" ]; then
+        echo "Deleting a student record..."
+        read -p "Enter student ID to delete: " delete_id
+        if [ -f Students-list_0333.txt ]; then
+            grep -v "$delete_id" Students-list_0333.txt > temp.txt
+            mv temp.txt Students-list_0333.txt
+            echo "Student record deleted successfully!"
+        else
+            echo "No student records found."
+        fi
 

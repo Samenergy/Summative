@@ -20,4 +20,12 @@ while true; do
 
 	elif ["$choice" =="2"]; then 
 		cat Student-list_0333.txt
+elif [ "$choice" == "5" ]; then
+        echo "Exiting the application..."
+        exit 0
 
+    else
+        echo "Invalid choice. Please try again."
+
+    fi
+done

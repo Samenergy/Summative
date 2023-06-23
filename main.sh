@@ -19,18 +19,6 @@ while true; do
 		echo "Student record Created"
 
 	elif ["$choice" =="2"]; then 
-<<<<<<< HEAD
-		cat Student-list_0333.txt
-elif [ "$choice" == "5" ]; then
-        echo "Exiting the application..."
-        exit 0
-
-    else
-        echo "Invalid choice. Please try again."
-
-   . fi
-done
-=======
 		cat Students-list_0333.txt
 
 	elif [ "$choice" == "3" ]; then
@@ -44,21 +32,28 @@ done
             		echo "No student records found."
         	fi
 	elif [ "$choice" == "4" ]; then	
-		 echo "Updating a student record..."
-        read -p "Enter student ID to update: " update_id
-        if [ -f Students-list_0333.txt ]; then
-            grep -v "$update_id" Students-list_0333.txt > temp.txt
-            mv temp.txt Students-list_0333.txt
-            echo "Enter updated student email: "
-            read updated_email
-            echo "Enter updated student age: "
-            read updated_age
-            echo "Enter updated student ID: "
-	    echo "Enter updated student ID: "
-            read updated_id
-            echo "$updated_email,$updated_age,$updated_id" >> Students-list_0333.txt
-            echo "Student record updated successfully!"
-        else
-            echo "No student records found."
-        fi
->>>>>>> ff3b8eb19209aa071d61f250610c5786c2f298cd
+		echo "Updating a student record..."
+        	read -p "Enter student ID to update: " update_id
+        	if [ -f Students-list_0333.txt ]; then
+	            grep -v "$update_id" Students-list_0333.txt > temp.txt
+	            mv temp.txt Students-list_0333.txt
+	            echo "Enter updated student email: "
+	            read updated_email
+	            echo "Enter updated student age: "
+	            read updated_age
+	            echo "Enter updated student ID: "
+		    echo "Enter updated student ID: "
+	            read updated_id
+	            echo "$updated_email,$updated_age,$updated_id" >> Students-list_0333.txt
+	            echo "Student record updated successfully!"
+        	else
+            	echo "No student records found."
+        	fi
+	elif [ "$choice" == "5" ]; then
+        	echo "Exiting the application..."
+        	exit 0
+
+    	else
+        	echo "Invalid choice. Please try again."
+	fi
+done

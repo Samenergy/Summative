@@ -18,4 +18,6 @@ while true; do
 		echo "$email,$age,$id">>Student-list_0333.txt
 		echo "Student record Created"
 
+	elif ["$choice" =="2"]; then 
+		cat Student-list_0333.txt
 

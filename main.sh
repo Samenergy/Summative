@@ -42,3 +42,10 @@ while true; do
             echo "Enter updated student age: "
             read updated_age
             echo "Enter updated student ID: "
+	    echo "Enter updated student ID: "
+            read updated_id
+            echo "$updated_email,$updated_age,$updated_id" >> Students-list_0333.txt
+            echo "Student record updated successfully!"
+        else
+            echo "No student records found."
+        fi

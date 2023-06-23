@@ -1,9 +1,16 @@
-#!/usr/bin/env bash
-source_directory="move-to-directory"
-destination_directory="/home/sftp-student/03033/summative"
-remote_server="a0dfc11ba139@a0dfc11ba139.a982e858.alu-cod.online"
-backup_file="backup-0323-RW-SOFEN-8120120-12.sh"
-tar -czf "$backup_file" "$source_directory"
-sshpass -p "899c79fc532cd0591af1" scp "$backup_file" "$remote_server:$destination_directory"
-rm "$backup_file"
-echo "backup done""vim -r backup-0323-RW-SOFEN-8120120-12.sh"
+[200~#!/bin/bash
+
+# Get the path to the directory that you want to backup
+directory="negpod_id-q1"
+
+# Get the IP address of the remote server
+remote_server_ip="192.168.1.10"
+
+# Get the username of the user on the remote server
+remote_server_username="username"
+
+# Get the path to the directory on the remote server where you want to backup the files
+remote_server_dir="/home/username/backups"
+
+# Use the scp command to copy the files to the remote server
+scp -r $directory $remote_server_username@$remote_

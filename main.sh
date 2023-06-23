@@ -6,7 +6,8 @@ while true; do
 	echo " 2. view all student records"
 	echo " 3. Delete student record"
 	echo " 4. update a student record "
-	echo " 5. Exit the application "
+	echo " 5. Search and Sort Student emails"
+	echo " 6. Exit the application "
 
 	read -p "Enter your choice: " choice
 
@@ -50,6 +51,15 @@ while true; do
             	echo "No student records found."
         	fi
 	elif [ "$choice" == "5" ]; then
+        	echo "Searching and sorting student emails..."
+        	if [ ! -f Students-list_0333.txt ]; then
+            		echo "No student records found."
+        	else
+            		cut -d ',' -f 1 Students-list_0333.txt | sort > student-emails.txt
+            		echo "Student emails have been sorted and saved in student-emails.txt"
+        	fi
+
+	elif [ "$choice" == "6" ]; then
         	echo "Exiting the application..."
         	exit 0
 

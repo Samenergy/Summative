@@ -30,7 +30,7 @@ while true; do
             		mv temp.txt Students-list_0333.txt
             		echo "Student record deleted successfully!"
         	else
-            		echo "No student records found."
+            		echo "No student records found"
         	fi
 	elif [ "$choice" == "4" ]; then	
 		echo "Updating a student record..."

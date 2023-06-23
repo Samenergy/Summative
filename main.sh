@@ -11,15 +11,15 @@ while true; do
 
 	read -p "Enter your choice: " choice
 
-	if ["$choice " =="1"]; then
+	if [ "$choice " == "1" ]; then
 		echo "Creating a student record"
-		read -p "Enter student email " email
+		read -p "Enter student email" email
 		read -p "Enter student age" age
 		read -p "Enter student ID" id
 		echo "$email,$age,$id">>Student-list_0333.txt
 		echo "Student record Created"
 
-	elif ["$choice" =="2"]; then 
+	elif [ "$choice" == "2" ]; then 
 		cat Students-list_0333.txt
 
 	elif [ "$choice" == "3" ]; then
@@ -30,7 +30,7 @@ while true; do
             		mv temp.txt Students-list_0333.txt
             		echo "Student record deleted successfully!"
         	else
-            		echo "No student records found."
+            		echo "No student records found"
         	fi
 	elif [ "$choice" == "4" ]; then	
 		echo "Updating a student record..."

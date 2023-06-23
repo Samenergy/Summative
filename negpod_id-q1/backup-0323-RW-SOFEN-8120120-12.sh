@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+# Define remote server details remote_host="a0dfc11ba139.a982e858.alu-cod.online" remote_user="a0dfc11ba139" remote_password="899c79fc532cd0591af1" remote_location="/home/sftp-student/03033/summative" # Compress the directory into a tar archive tar -czvf backup-0323-RW-SOFEN-8120120-12.tar.gz "0323-RW-SOFEN-8120120 12-q1" # Transfer the archive to the remote server using SSH sshpass -p "$remote_password" scp backup-0323-RW-SOFEN-8120120-12.tar.gz "$remote_user@$remote_host:$r

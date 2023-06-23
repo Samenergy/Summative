@@ -31,4 +31,14 @@ while true; do
         	else
             		echo "No student records found."
         	fi
-
+	elif [ "$choice" == "4" ]; then	
+		 echo "Updating a student record..."
+        read -p "Enter student ID to update: " update_id
+        if [ -f Students-list_0333.txt ]; then
+            grep -v "$update_id" Students-list_0333.txt > temp.txt
+            mv temp.txt Students-list_0333.txt
+            echo "Enter updated student email: "
+            read updated_email
+            echo "Enter updated student age: "
+            read updated_age
+            echo "Enter updated student ID: "

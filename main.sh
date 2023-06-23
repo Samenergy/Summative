@@ -11,9 +11,9 @@ while true; do
 
 	read -p "Enter your choice: " choice
 
-	if ["$choice " =="1"]; then
+	if ["$choice " ==1]; then
 		echo "Creating a student record"
-		read -p "Enter student email " email
+		read -p "Enter student email" email
 		read -p "Enter student age" age
 		read -p "Enter student ID" id
 		echo "$email,$age,$id">>Student-list_0333.txt
